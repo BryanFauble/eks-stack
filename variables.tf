@@ -10,6 +10,12 @@ variable "cluster_version" {
   default     = "1.29"
 }
 
+variable "vpc_name" {
+  description = "Name for the VPC"
+  type        = string
+  default     = "dpe-prod-vpc"
+}
+
 variable "cidr" {
   description = "CIDR block for the VPC"
   type        = string
@@ -46,6 +52,12 @@ variable "region" {
   description = "AWS region"
   type        = string
   default     = "us-east-1"
+}
+
+variable "secretsmanager_key_spotinst_token" {
+  description = "Name in secretsmanager to acces token"
+  type        = string
+  default     = "spotinst_token"
 }
 
 variable "spotinst_account" {

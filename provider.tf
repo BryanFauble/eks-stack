@@ -2,10 +2,6 @@ provider "aws" {
   region = var.region
 }
 
-provider "spotinst" {
-  account = var.spotinst_account
-  token   = data.aws_secretsmanager_secret_version.secret_credentials.secret_string
-}
 
 provider "kubernetes" {
   host                   = data.aws_eks_cluster.cluster.endpoint
